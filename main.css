@@ -113,7 +113,11 @@ main{
     margin-bottom: 1rem;
 }
 
+#goals .goal .content{
+    flex : 1 1 0%;
+}
 #goals .goal .content .text{
+   
     color:var(--light);
     font-size: 1.25rem;
     width: 100%;

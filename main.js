@@ -52,12 +52,39 @@ form.addEventListener('submit',(e) =>{
         goal_delete_element.innerHTML = "Delete";
 
 
+        //appending the button elements to the action
+        goal_action_element.appendChild(goal_edit_element);
+        goal_action_element.appendChild(goal_delete_element);
+
+
+        goal_Element.appendChild(goal_action_element);
         listElement.appendChild(goal_Element);
 
+        input.value ="";
 
+  
+        //creation of the buttons and giving them functions
+        //this will allow you to edit the task and then change the element button to save so you can save the task you just edited
+        goal_edit_element.addEventListener('click', () =>{
+                if(goal_edit_element.innerText.toLowerCase()== "edit")
+                {
+                        goal_input_element.removeAttribute("readonly");
+                        goal_input_element.focus();
+                        goal_edit_element.innerText="Save";
+                }else{
+                        goal_input_element.setAttribute("readonly", "readonly");
+                        goal_edit_element.innerText ="Edit";
+                }
+        })
+
+        //this will delete the goal from the goal list
+        goal_delete_element.addEventListener('click', () =>{
+                listElement.removeChild(goal_Element);
+        })
 
 })
         
+
       }
         
 })

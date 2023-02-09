@@ -45,9 +45,11 @@ form.addEventListener('submit',(e) =>{
 
         const goal_edit_element = document.createElement("button");
         goal_edit_element.classList.add("edit");
+        goal_edit_element.innerHTML ="Edit";
 
         const goal_delete_element = document.createElement("button");
         goal_delete_element.classList.add("delete");
+        goal_delete_element.innerHTML = "Delete";
 
 
         listElement.appendChild(goal_Element);
